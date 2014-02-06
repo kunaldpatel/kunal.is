@@ -1,0 +1,124 @@
+/* Variables */
+/* Mixins */
+/* Typography
+================================= */
+h1, h2, h3, h4, h5, h6 {
+  color: #3a3632;
+  font-family: "brandon-grotesque";
+  font-style: normal;
+  font-weight: 900;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 3em;
+  letter-spacing: 0.025em;
+  margin-bottom: 0.25em;
+  margin-top: 1em;
+  text-align: center; }
+
+h2 {
+  font-size: 2em;
+  letter-spacing: 0.01em; }
+
+h3 {
+  font-size: 1.5em; }
+
+p {
+  color: #3a3632;
+  font-family: "ff-meta-serif-web-pro";
+  font-size: 1.5em;
+  line-height: 1.8;
+  margin: 0; }
+
+a {
+  color: #428bca; }
+
+a:hover {
+  color: #f9275d;
+  text-decoration: none;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -ms-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+div.contact p a {
+  text-decoration: underline; }
+
+span {
+  cursor: pointer; }
+
+span.answer {
+  color: gray;
+  font-style: italic; }
+
+span.answer:hover {
+  color: #f9275d;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -ms-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+span.answer.current {
+  color: #f9275d; }
+
+span.answer.current.active-hover-fix:hover {
+  color: gray;
+  -webkit-transition-property: color;
+  -moz-transition-property: color;
+  -ms-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  -moz-transition-timing-function: ease-out;
+  -ms-transition-timing-function: ease-out;
+  transition-timing-function: ease-out; }
+
+.strike {
+  text-decoration: line-through; }
+
+/* Layout
+================================= */
+.chart {
+  width: 100%; }
+
+div.container {
+  margin-bottom: 2em;
+  margin-top: 1em; }
+  div.container div.heads {
+    display: block;
+    margin: 0 auto;
+    height: 200px;
+    position: relative; }
+    div.container div.heads object {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      visibility: hidden;
+      width: 100%; }
+    div.container div.heads object.active {
+      visibility: visible;
+      -webkit-animation: bounce 0.3s ease-out;
+      -moz-animation: bounce 0.3s ease-out;
+      -ms-animation: bounce 0.3s ease-out;
+      animation: bounce 0.3s ease-out; }

@@ -1,0 +1,147 @@
+/* Variables */
+$heading-font: "brandon-grotesque";
+$body-font: "ff-meta-serif-web-pro";
+$copy: #3a3632;
+$link: #428bca;
+$active: #f9275d;
+$inactive: #808080;
+
+/* Mixins */
+@mixin animation($animation) {
+  	-webkit-animation: $animation;
+       -moz-animation: $animation;
+        -ms-animation: $animation;
+            animation: $animation;
+}
+@mixin transition-duration($duration) {
+  	-webkit-transition-duration: $duration;
+       -moz-transition-duration: $duration;
+        -ms-transition-duration: $duration;
+            transition-duration: $duration;
+}
+@mixin transition-property($property) {
+	-webkit-transition-property: $property;
+	   -moz-transition-property: $property;
+	    -ms-transition-property: $property;
+	        transition-property: $property;
+}
+@mixin transition-timing-function($timing) {
+	-webkit-transition-timing-function: $timing;
+       -moz-transition-timing-function: $timing;
+        -ms-transition-timing-function: $timing;
+            transition-timing-function: $timing;
+}
+
+/* Typography
+================================= */
+h1, h2, h3, h4, h5, h6 {
+	color: $copy;
+	font-family: $heading-font;
+	font-style: normal;
+	font-weight: 900;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 3em;
+	letter-spacing: 0.025em;
+	margin-bottom: 0.25em;
+	margin-top: 1em;
+	text-align: center;
+}
+
+h2 {
+	font-size: 2em;
+	letter-spacing: 0.01em;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+p {
+	color: $copy;
+	font-family: $body-font;
+	font-size: 1.5em;
+	line-height: 1.8;
+	margin: 0;
+}
+
+a {
+	color: $link;
+}
+	a:hover {
+		color: $active;
+		text-decoration: none;
+		@include transition-property(color);
+		@include transition-duration(0.3s);
+		@include transition-timing-function(ease-out);
+	}
+
+div.contact {
+	p {
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+span {
+	cursor: pointer;
+}
+	span.answer {
+		color: $inactive;
+		font-style: italic;
+	}
+		span.answer:hover {
+			color: $active;
+			@include transition-property(color);
+			@include transition-duration(0.3s);
+			@include transition-timing-function(ease-out);	
+		}
+		span.answer.current {
+			color: $active;
+		}
+			span.answer.current.active-hover-fix:hover {
+				color: $inactive;
+				@include transition-property(color);
+				@include transition-duration(0.3s);
+				@include transition-timing-function(ease-out);
+			}
+
+.strike {
+	text-decoration: line-through;
+}
+
+/* Layout
+================================= */
+
+.chart {
+	width: 100%;
+}
+
+div.container {
+	margin-bottom: 2em;
+	margin-top: 1em;
+
+	div.heads {
+		display: block;
+		margin: 0 auto;
+		height: 200px;
+		position: relative;
+	
+		object {
+			height: 100%;
+			left: 0;
+			position: absolute;
+			top: 0;
+			visibility: hidden;	
+			width: 100%;
+		}
+			object.active {
+				visibility: visible;
+				@include animation(bounce 0.3s ease-out);
+			}
+	}
+}
