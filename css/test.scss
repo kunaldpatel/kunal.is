@@ -1,44 +1,33 @@
-/* Variables */
+@import "bourbon";
+
+// Variables
 $heading-font: "brandon-grotesque";
 $body-font: "ff-meta-serif-web-pro";
 $copy: #3a3632;
 $link: #428bca;
 $active: #f9275d;
 $inactive: #808080;
+$hover_duration: 300ms;
 
 /* Mixins */
-@mixin animation($animation) {
-  	-webkit-animation: $animation;
-       -moz-animation: $animation;
-        -ms-animation: $animation;
-            animation: $animation;
-}
-@mixin transition-duration($duration) {
-  	-webkit-transition-duration: $duration;
-       -moz-transition-duration: $duration;
-        -ms-transition-duration: $duration;
-            transition-duration: $duration;
-}
-@mixin transition-property($property) {
-	-webkit-transition-property: $property;
-	   -moz-transition-property: $property;
-	    -ms-transition-property: $property;
-	        transition-property: $property;
-}
-@mixin transition-timing-function($timing) {
-	-webkit-transition-timing-function: $timing;
-       -moz-transition-timing-function: $timing;
-        -ms-transition-timing-function: $timing;
-            transition-timing-function: $timing;
+@include keyframes(bounce) {
+	0%, 100% {
+		@include transform(translateY(0));
+	}
+	50% {
+		@include transform(translateY(-10%));
+	}
 }
 
 /* Typography
 ================================= */
 h1, h2, h3, h4, h5, h6 {
 	color: $copy;
-	font-family: $heading-font;
-	font-style: normal;
-	font-weight: 900;
+	font: {
+		family: $heading-font;
+		style: normal;
+		weight: 900;
+	}
 	margin: 0;
 	padding: 0;
 }
@@ -46,8 +35,10 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
 	font-size: 3em;
 	letter-spacing: 0.025em;
-	margin-bottom: 0.25em;
-	margin-top: 1em;
+	margin: {
+		bottom: 0.25em;
+		top: 1em;
+	}
 	text-align: center;
 }
 
@@ -62,29 +53,25 @@ h3 {
 
 p {
 	color: $copy;
-	font-family: $body-font;
-	font-size: 1.5em;
+	font: {
+		family: $body-font;
+		size: 1.5em;
+	}
 	line-height: 1.8;
 	margin: 0;
 }
 
 a {
 	color: $link;
-}
-	a:hover {
+	&:hover {
 		color: $active;
 		text-decoration: none;
-		@include transition-property(color);
-		@include transition-duration(0.3s);
-		@include transition-timing-function(ease-out);
+		@include transition(color $hover_duration ease-out);
 	}
+}
 
-div.contact {
-	p {
-		a {
-			text-decoration: underline;
-		}
-	}
+div.contact > p > a {
+	text-decoration: underline;
 }
 
 span {
@@ -93,21 +80,17 @@ span {
 	span.answer {
 		color: $inactive;
 		font-style: italic;
-	}
-		span.answer:hover {
+		&:hover {
 			color: $active;
-			@include transition-property(color);
-			@include transition-duration(0.3s);
-			@include transition-timing-function(ease-out);	
+			@include transition(color $hover_duration ease-out);
 		}
+	}
 		span.answer.current {
 			color: $active;
 		}
 			span.answer.current.active-hover-fix:hover {
 				color: $inactive;
-				@include transition-property(color);
-				@include transition-duration(0.3s);
-				@include transition-timing-function(ease-out);
+				@include transition(color $hover_duration ease-out);
 			}
 
 .strike {
@@ -122,9 +105,10 @@ span {
 }
 
 div.container {
-	margin-bottom: 2em;
-	margin-top: 1em;
-
+	margin: {
+		bottom: 2em;
+		top: 1em;
+	}
 	div.heads {
 		display: block;
 		margin: 0 auto;
@@ -143,5 +127,21 @@ div.container {
 				visibility: visible;
 				@include animation(bounce 0.3s ease-out);
 			}
+	}
+}
+
+/* Media Queries
+================================= */
+/* Small */
+@media screen and (min-width: 768px) {
+	div.heads {
+		height: 300px;
+	}
+}
+
+/* Medium - L */
+@media screen and (min-width: 992px) {
+	div.heads {
+		height: 400px;
 	}
 }
