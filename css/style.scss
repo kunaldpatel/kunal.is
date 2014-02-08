@@ -1,22 +1,23 @@
 @import "bourbon";
 
 // Variables
-$heading-font: "brandon-grotesque";
-$body-font: "ff-meta-serif-web-pro";
+$heading_font: "brandon-grotesque";
+$body_font: "ff-meta-serif-web-pro";
 $copy: #3a3632;
 $link: #428bca;
 $active: #f9275d;
 $inactive: #808080;
 $hover_duration: 300ms;
+$hover: color $hover_duration ease-out;
+// Breakpoints
+$break_small: 320px;
+$break_medium: 768px;
+$break_large: 992px;
 
-/* Mixins */
-@include keyframes(bounce) {
-	0%, 100% {
-		@include transform(translateY(0));
-	}
-	50% {
-		@include transform(translateY(-10%));
-	}
+// Mixins
+// Media Query
+@mixin respond-to($breakpoint) {
+    @media only screen and (min-width: $breakpoint) { @content; }
 }
 
 /* Typography
@@ -24,7 +25,7 @@ $hover_duration: 300ms;
 h1, h2, h3, h4, h5, h6 {
 	color: $copy;
 	font: {
-		family: $heading-font;
+		family: $heading_font;
 		style: normal;
 		weight: 900;
 	}
@@ -54,7 +55,7 @@ h3 {
 p {
 	color: $copy;
 	font: {
-		family: $body-font;
+		family: $body_font;
 		size: 1.5em;
 	}
 	line-height: 1.8;
@@ -66,7 +67,7 @@ a {
 	&:hover {
 		color: $active;
 		text-decoration: none;
-		@include transition(color $hover_duration ease-out);
+		@include transition($hover);
 	}
 }
 
@@ -82,7 +83,7 @@ span {
 		font-style: italic;
 		&:hover {
 			color: $active;
-			@include transition(color $hover_duration ease-out);
+			@include transition($hover);
 		}
 	}
 		span.answer.current {
@@ -90,7 +91,7 @@ span {
 		}
 			span.answer.current.active-hover-fix:hover {
 				color: $inactive;
-				@include transition(color $hover_duration ease-out);
+				@include transition($hover);
 			}
 
 .strike {
@@ -114,6 +115,12 @@ div.container {
 		margin: 0 auto;
 		height: 200px;
 		position: relative;
+		@include respond-to($break_small) {
+			height: 300px;
+		}
+		@include respond-to($break_medium) {
+			height: 400px;
+		}
 	
 		object {
 			height: 100%;
@@ -130,18 +137,13 @@ div.container {
 	}
 }
 
-/* Media Queries
+/* Animations
 ================================= */
-/* Small */
-@media screen and (min-width: 768px) {
-	div.heads {
-		height: 300px;
+@include keyframes(bounce) {
+	0%, 100% {
+		@include transform(translateY(0));
 	}
-}
-
-/* Medium - L */
-@media screen and (min-width: 992px) {
-	div.heads {
-		height: 400px;
+	50% {
+		@include transform(translateY(-10%));
 	}
 }
