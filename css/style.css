@@ -75,7 +75,7 @@ div.container {
   margin-top: 1em; }
   div.container div.heads {
     display: block;
-    margin: 0 auto;
+    margin: 1em auto 0 auto;
     height: 200px;
     position: relative; }
     @media only screen and (min-width: 320px) {
@@ -93,9 +93,9 @@ div.container {
       width: 100%; }
     div.container div.heads object.active {
       visibility: visible;
-      -webkit-animation: bounce 0.3s ease-out;
-      -moz-animation: bounce 0.3s ease-out;
-      animation: bounce 0.3s ease-out; }
+      -webkit-animation: stretchOpen 0.3s ease-out;
+      -moz-animation: stretchOpen 0.3s ease-out;
+      animation: stretchOpen 0.3s ease-out; }
 
 /* Animations
 ================================= */
@@ -126,3 +126,43 @@ div.container {
 
   50% {
     transform: translateY(-10%); } }
+
+@-webkit-keyframes stretchOpen {
+  0% {
+    -webkit-transform: scaleX(0); }
+
+  75% {
+    -webkit-transform: scaleX(1.25); }
+
+  100% {
+    -webkit-transform: scaleX(1); } }
+
+@-moz-keyframes stretchOpen {
+  0% {
+    -moz-transform: scaleX(0); }
+
+  75% {
+    -moz-transform: scaleX(1.25); }
+
+  100% {
+    -moz-transform: scaleX(1); } }
+
+@-o-keyframes stretchOpen {
+  0% {
+    -o-transform: scaleX(0); }
+
+  75% {
+    -o-transform: scaleX(1.25); }
+
+  100% {
+    -o-transform: scaleX(1); } }
+
+@keyframes stretchOpen {
+  0% {
+    transform: scaleX(0); }
+
+  75% {
+    transform: scaleX(1.25); }
+
+  100% {
+    transform: scaleX(1); } }
