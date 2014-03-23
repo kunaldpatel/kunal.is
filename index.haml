@@ -14,7 +14,10 @@
 		%link{:href => "css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}
 		/ Styles
 		%link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}
-
+		/ Hublo
+		:javascript
+			(function(){var hb = document.createElement('script'); hb.type = 'text/javascript'; hb.async = true; hb.src = "//cdn.hublo.co/532a4e22e8009c45180000bc.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hb, s);})();
+		/ End Hublo
 	%body
 		/ Google Analytics via Google Tag Manager
 		%noscript
@@ -24,13 +27,13 @@
 		/ End Google Tag Manager
 		.container
 			.heads
-				%object.chart.active#hi-svg{:data => "img/hi_full.svg", :type => "image/svg+xml"}
-				%object.chart#arch-svg{:data => "img/balance_full.svg", :type => "image/svg+xml"}
-				%object.chart#yes-svg{:data => "img/gadget_full.svg", :type => "image/svg+xml"}
-				%object.chart#dumb-svg{:data => "img/dunce_full.svg", :type => "image/svg+xml"}
-				%object.chart#hero-svg{:data => "img/batman_full.svg", :type => "image/svg+xml"}
-				%object.chart#huge-svg{:data => "img/bridge_full.svg", :type => "image/svg+xml"}
-				%object.chart#ideas-svg{:data => "img/mad-hatter_full.svg", :type => "image/svg+xml"}
+				%object.chart.active#hi-svg{:data => "img/hi_md.svg", :type => "image/svg+xml"}
+				%object.chart#arch-svg{:data => "img/balance_md.svg", :type => "image/svg+xml"}
+				%object.chart#yes-svg{:data => "img/gadget_md.svg", :type => "image/svg+xml"}
+				%object.chart#dumb-svg{:data => "img/dunce_md.svg", :type => "image/svg+xml"}
+				%object.chart#hero-svg{:data => "img/batman_md.svg", :type => "image/svg+xml"}
+				%object.chart#huge-svg{:data => "img/bridge_md.svg", :type => "image/svg+xml"}
+				%object.chart#ideas-svg{:data => "img/mad-hatter_md.svg", :type => "image/svg+xml"}
 			.row
 				/ Intro
 				.col-sm-8.col-sm-offset-2.intro
@@ -39,7 +42,7 @@
 				/ Contact
 				.col-sm-8.col-sm-offset-2.contact
 					%h1 Wanna chat?
-					%p If you're looking for a UX/Product Designer for your NYC-based product team, let's <a id="email" href="#" target="_blank">schedule a time to chat</a> to review my work and see if I can help. Need some more info about me first? <a href="assets/about_kunal.pdf" target="_blank">Take a peek at my r&eacute;sum&eacute;</a> or <a href="http://www.linkedin.com/in/kunaldpatel/" target="_blank">LinkedIn profile</a>.
+					%p Curious about what I'm working on? Let's <a id="email" href="#" target="_blank">schedule a time to chat</a> over coffee and see if we can help each other out. Need some more info about me first? <a href="assets/about_kunal.pdf" target="_blank">Take a peek at my r&eacute;sum&eacute;</a> or <a href="http://www.linkedin.com/in/kunaldpatel/" target="_blank">LinkedIn profile</a>.
 
 		/ JAVASCRIPT
 		/ Typekit
