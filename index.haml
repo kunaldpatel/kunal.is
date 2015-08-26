@@ -4,7 +4,7 @@
 	%head
 		%title Kunal D. Patel
 		/ Meta
-		%meta{:name => "description", :content => "Hi there! I'm Kunal D. Patel, a User Experience Designer and Technologist who practices with an architect's sensibilities. You can learn more about me and my work here."}
+		%meta{:name => "description", :content => "Hi there! I'm Kunal D. Patel, a UX Designer and Technologist who practices with an architect's sensibilities. You can learn more about me and my work here."}
 		%meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
 		%meta{:name => "ROBOTS", :content => "INDEX, FOLLOW"}
 		/ Favicon with query string to cache-bust
@@ -12,46 +12,46 @@
 		/ CSS
 		/ Bootstrap
 		%link{:href => "css/bootstrap.min.css", :rel => "stylesheet", :type => "text/css"}
-		/ Styles
+		/ Google Fonts
+		%link{:href => "http://fonts.googleapis.com/css?family=Varela+Round|Merriweather:regular,italic", :rel => "stylesheet", :type => "text/css"}
+		/ Stylesheet
 		%link{:href => "css/style.css", :rel => "stylesheet", :type => "text/css"}
-		/ Hublo
-		:javascript
-			(function(){var hb = document.createElement('script'); hb.type = 'text/javascript'; hb.async = true; hb.src = "//cdn.hublo.co/532a4e22e8009c45180000bc.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hb, s);})();
-		/ End Hublo
+
 	%body
+		.container
+			.heads
+				%object.chart.active#hi-svg{:data => "img/hi_md.svg", :type => "image/svg+xml"}
+				%object.chart#arch-svg{:data => "img/balance_md.svg", :type => "image/svg+xml"}
+				%object.chart#yes-svg{:data => "img/gadget_md.svg", :type => "image/svg+xml"}
+				%object.chart#dumb-svg{:data => "img/empty_md.svg", :type => "image/svg+xml"}
+				%object.chart#hero-svg{:data => "img/batman_md.svg", :type => "image/svg+xml"}
+				%object.chart#huge-svg{:data => "img/bridge_md.svg", :type => "image/svg+xml"}
+				%object.chart#ideas-svg{:data => "img/mad-hatter_md.svg", :type => "image/svg+xml"}
+			.row
+				/ Intro
+				.col-sm-6.col-sm-offset-3.intro
+					%h1 I'm Kunal.
+					%p A UX Designer + Technologist who won't let go of <a class="bait" href="#" id="arch">my past</a>, says yes to <a class="bait" href="#" id="yes">everything</a>, doesn't care about <a class="bait" href="#" id="dumb">asking dumb questions</a>, and has to be reminded that <a class="bait" href="#" id="hero">I am not a superhero</a>. I also once left a <a class="bait" href="#" id="huge">great job</a> to take a few months off and work on some <a class="bait" href="#" id="ideas">crazy ideas</a>.
+				/ Work
+				.col-sm-6.col-sm-offset-3.work
+					%h1 I'm looking for work.
+					%p After spending 3.5 years working in UX at <a href="http://www.hugeinc.com" target="_blank">Huge</a>, and the last 1.5 years as a Product Manager at <a href="http://www.contently.com" target="_blank">Contently</a>, I am eager to join a digital Product Design team and share what I have learned about partnering with business, technology, and research teams to solve problems. If you think my experience would be a good fit, I would love to hear from you.
+
+				/Contact
+				.col-sm-6.col-sm-offset-3.contact
+					%h1 Want to learn more?
+					%p For an overview of my career, <a href="assets/about_kunal.pdf" target="_blank">take a peek at my r&eacute;sum&eacute;</a> or <a href="http://www.linkedin.com/in/kunaldpatel/" target="_blank">LinkedIn profile</a>. If you like what you see, let's <a id="email" href="#" target="_blank">schedule a time to chat</a> over coffee and see if we can help each other out. 
+
+		/ JAVASCRIPT
+		/ jQuery
+		%script{:src => "js/jquery-1.11.0.min.js", :type => "text/javascript"}
+		/ Bootstrap
+		%script{:src => "js/bootstrap.min.js", :type => "text/javascript"}
+		/ Scripts 
+		%script{:src => "js/main-ck.js", :type => "text/javascript"}
 		/ Google Analytics via Google Tag Manager
 		%noscript
 			%iframe{:src => "//www.googletagmanager.com/ns.html?id=GTM-PT6R7K", :height => "0", :width => "0", :style => "display:none;visibility:hidden"}
 		:javascript
 			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PT6R7K');
 		/ End Google Tag Manager
-		.container
-			.heads
-				%object.chart.active#hi-svg{:data => "img/hi_md.svg", :type => "image/svg+xml"}
-				%object.chart#arch-svg{:data => "img/balance_md.svg", :type => "image/svg+xml"}
-				%object.chart#yes-svg{:data => "img/gadget_md.svg", :type => "image/svg+xml"}
-				%object.chart#dumb-svg{:data => "img/dunce_md.svg", :type => "image/svg+xml"}
-				%object.chart#hero-svg{:data => "img/batman_md.svg", :type => "image/svg+xml"}
-				%object.chart#huge-svg{:data => "img/bridge_md.svg", :type => "image/svg+xml"}
-				%object.chart#ideas-svg{:data => "img/mad-hatter_md.svg", :type => "image/svg+xml"}
-			.row
-				/ Intro
-				.col-sm-8.col-sm-offset-2.intro
-					%h1 I'm Kunal.
-					%p A UX Designer + Technologist who won't let go of <a class="bait" href="#" id="arch">my past</a>, says yes to <a class="bait" href="#" id="yes">everything</a>, doesn't care about <a class="bait" href="#" id="dumb">asking dumb questions</a>, and has to be reminded that <a class="bait" href="#" id="hero">I am not a superhero</a>. I also left my <a class="bait" href="#" id="huge">last job</a> to take a few months off and work on some <a class="bait" href="#" id="ideas">crazy ideas</a>.
-				/ Contact
-				.col-sm-8.col-sm-offset-2.contact
-					%h1 Wanna chat?
-					%p Curious about what I'm working on? Let's <a id="email" href="#" target="_blank">schedule a time to chat</a> over coffee and see if we can help each other out. Need some more info about me first? <a href="assets/about_kunal.pdf" target="_blank">Take a peek at my r&eacute;sum&eacute;</a> or <a href="http://www.linkedin.com/in/kunaldpatel/" target="_blank">LinkedIn profile</a>.
-
-		/ JAVASCRIPT
-		/ Typekit
-		%script{:type => "text/javascript", :src => "//use.typekit.net/kkg5abv.js"}
-		%script{:type => "text/javascript"}
-			try{Typekit.load();}catch(e){}
-		/ jQuery
-		%script{:src => "js/jquery-1.11.0.min.js", :type => "text/javascript"}
-		/ Bootstrap
-		%script{:src => "js/bootstrap.min.js", :type => "text/javascript"}
-		/ Scripts 
-		%script{:src => "js/main.js", :type => "text/javascript"}

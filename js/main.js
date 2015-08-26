@@ -4,7 +4,7 @@ var answers = new Object({});
 answers.arch = "in architecture, which taught me to balance design with construction";
 answers.yes = "from coding prototypes to running a UX School";
 answers.dumb = "as long as they help lead to the right answer";
-answers.huge = "as an Experience Lead at Huge, after 3.5 years";
+answers.huge = "as an Experience Lead at Huge";
 answers.ideas = "best explained over a drink (tea, perhaps?)";
 answers.hero = "saving lives, but a designer trying to make them easier";
 

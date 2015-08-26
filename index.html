@@ -3,7 +3,7 @@
   <head>
     <title>Kunal D. Patel</title>
     <!-- Meta -->
-    <meta content="Hi there! I'm Kunal D. Patel, a User Experience Designer and Technologist who practices with an architect's sensibilities. You can learn more about me and my work here." name='description'>
+    <meta content="Hi there! I'm Kunal D. Patel, a UX Designer and Technologist who practices with an architect's sensibilities. You can learn more about me and my work here." name='description'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <meta content='INDEX, FOLLOW' name='ROBOTS'>
     <!-- Favicon with query string to cache-bust -->
@@ -11,15 +11,47 @@
     <!-- CSS -->
     <!-- Bootstrap -->
     <link href='css/bootstrap.min.css' rel='stylesheet' type='text/css'>
-    <!-- Styles -->
+    <!-- Google Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Varela+Round|Merriweather:regular,italic' rel='stylesheet' type='text/css'>
+    <!-- Stylesheet -->
     <link href='css/style.css' rel='stylesheet' type='text/css'>
-    <!-- Hublo -->
-    <script>
-      (function(){var hb = document.createElement('script'); hb.type = 'text/javascript'; hb.async = true; hb.src = "//cdn.hublo.co/532a4e22e8009c45180000bc.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hb, s);})();
-    </script>
-    <!-- End Hublo -->
   </head>
   <body>
+    <div class='container'>
+      <div class='heads'>
+        <object class='chart active' data='img/hi_md.svg' id='hi-svg' type='image/svg+xml'></object>
+        <object class='chart' data='img/balance_md.svg' id='arch-svg' type='image/svg+xml'></object>
+        <object class='chart' data='img/gadget_md.svg' id='yes-svg' type='image/svg+xml'></object>
+        <object class='chart' data='img/empty_md.svg' id='dumb-svg' type='image/svg+xml'></object>
+        <object class='chart' data='img/batman_md.svg' id='hero-svg' type='image/svg+xml'></object>
+        <object class='chart' data='img/bridge_md.svg' id='huge-svg' type='image/svg+xml'></object>
+        <object class='chart' data='img/mad-hatter_md.svg' id='ideas-svg' type='image/svg+xml'></object>
+      </div>
+      <div class='row'>
+        <!-- Intro -->
+        <div class='col-sm-6 col-sm-offset-3 intro'>
+          <h1>I'm Kunal.</h1>
+          <p>A UX Designer + Technologist who won't let go of <a class="bait" href="#" id="arch">my past</a>, says yes to <a class="bait" href="#" id="yes">everything</a>, doesn't care about <a class="bait" href="#" id="dumb">asking dumb questions</a>, and has to be reminded that <a class="bait" href="#" id="hero">I am not a superhero</a>. I also once left a <a class="bait" href="#" id="huge">great job</a> to take a few months off and work on some <a class="bait" href="#" id="ideas">crazy ideas</a>.</p>
+        </div>
+        <!-- Work -->
+        <div class='col-sm-6 col-sm-offset-3 work'>
+          <h1>I'm looking for work.</h1>
+          <p>After spending 3.5 years working in UX at <a href="http://www.hugeinc.com" target="_blank">Huge</a>, and the last 1.5 years as a Product Manager at <a href="http://www.contently.com" target="_blank">Contently</a>, I am eager to join a digital Product Design team and share what I have learned about partnering with business, technology, and research teams to solve problems. If you think my experience would be a good fit, I would love to hear from you.</p>
+        </div>
+        <!-- Contact -->
+        <div class='col-sm-6 col-sm-offset-3 contact'>
+          <h1>Want to learn more?</h1>
+          <p>For an overview of my career, <a href="assets/about_kunal.pdf" target="_blank">take a peek at my r&eacute;sum&eacute;</a> or <a href="http://www.linkedin.com/in/kunaldpatel/" target="_blank">LinkedIn profile</a>. If you like what you see, let's <a id="email" href="#" target="_blank">schedule a time to chat</a> over coffee and see if we can help each other out.</p>
+        </div>
+      </div>
+    </div>
+    <!-- JAVASCRIPT -->
+    <!-- jQuery -->
+    <script src='js/jquery-1.11.0.min.js' type='text/javascript'></script>
+    <!-- Bootstrap -->
+    <script src='js/bootstrap.min.js' type='text/javascript'></script>
+    <!-- Scripts -->
+    <script src='js/main-ck.js' type='text/javascript'></script>
     <!-- Google Analytics via Google Tag Manager -->
     <noscript>
       <iframe height='0' src='//www.googletagmanager.com/ns.html?id=GTM-PT6R7K' style='display:none;visibility:hidden' width='0'></iframe>
@@ -28,40 +60,5 @@
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PT6R7K');
     </script>
     <!-- End Google Tag Manager -->
-    <div class='container'>
-      <div class='heads'>
-        <object class='chart active' data='img/hi_md.svg' id='hi-svg' type='image/svg+xml'></object>
-        <object class='chart' data='img/balance_md.svg' id='arch-svg' type='image/svg+xml'></object>
-        <object class='chart' data='img/gadget_md.svg' id='yes-svg' type='image/svg+xml'></object>
-        <object class='chart' data='img/dunce_md.svg' id='dumb-svg' type='image/svg+xml'></object>
-        <object class='chart' data='img/batman_md.svg' id='hero-svg' type='image/svg+xml'></object>
-        <object class='chart' data='img/bridge_md.svg' id='huge-svg' type='image/svg+xml'></object>
-        <object class='chart' data='img/mad-hatter_md.svg' id='ideas-svg' type='image/svg+xml'></object>
-      </div>
-      <div class='row'>
-        <!-- Intro -->
-        <div class='col-sm-8 col-sm-offset-2 intro'>
-          <h1>I'm Kunal.</h1>
-          <p>A UX Designer + Technologist who won't let go of <a class="bait" href="#" id="arch">my past</a>, says yes to <a class="bait" href="#" id="yes">everything</a>, doesn't care about <a class="bait" href="#" id="dumb">asking dumb questions</a>, and has to be reminded that <a class="bait" href="#" id="hero">I am not a superhero</a>. I also left my <a class="bait" href="#" id="huge">last job</a> to take a few months off and work on some <a class="bait" href="#" id="ideas">crazy ideas</a>.</p>
-        </div>
-        <!-- Contact -->
-        <div class='col-sm-8 col-sm-offset-2 contact'>
-          <h1>Wanna chat?</h1>
-          <p>Curious about what I'm working on? Let's <a id="email" href="#" target="_blank">schedule a time to chat</a> over coffee and see if we can help each other out. Need some more info about me first? <a href="assets/about_kunal.pdf" target="_blank">Take a peek at my r&eacute;sum&eacute;</a> or <a href="http://www.linkedin.com/in/kunaldpatel/" target="_blank">LinkedIn profile</a>.</p>
-        </div>
-      </div>
-    </div>
-    <!-- JAVASCRIPT -->
-    <!-- Typekit -->
-    <script src='//use.typekit.net/kkg5abv.js' type='text/javascript'></script>
-    <script type='text/javascript'>
-      try{Typekit.load();}catch(e){}
-    </script>
-    <!-- jQuery -->
-    <script src='js/jquery-1.11.0.min.js' type='text/javascript'></script>
-    <!-- Bootstrap -->
-    <script src='js/bootstrap.min.js' type='text/javascript'></script>
-    <!-- Scripts -->
-    <script src='js/main.js' type='text/javascript'></script>
   </body>
 </html>

@@ -2,31 +2,24 @@
 ================================= */
 h1, h2, h3, h4, h5, h6 {
   color: #3a3632;
-  font-family: "brandon-grotesque";
+  font-family: "Varela Round", "Verdana", sans-serif;
   font-style: normal;
   font-weight: 900;
   margin: 0;
   padding: 0; }
 
 h1 {
-  font-size: 3em;
+  font-size: 2em;
   letter-spacing: 0.025em;
   margin-bottom: 0.25em;
   margin-top: 1em;
   text-align: center; }
 
-h2 {
-  font-size: 2em;
-  letter-spacing: 0.01em; }
-
-h3 {
-  font-size: 1.5em; }
-
 p {
   color: #3a3632;
-  font-family: "ff-meta-serif-web-pro";
-  font-size: 1.5em;
-  line-height: 1.8;
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: 1.2em;
+  line-height: 1.6;
   margin: 0; }
 
 a {

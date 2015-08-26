@@ -1,8 +1,8 @@
 @import "bourbon";
 
 // Variables
-$heading_font: "brandon-grotesque";
-$body_font: "ff-meta-serif-web-pro";
+$heading_font: "Varela Round";
+$body_font: "Merriweather";
 $copy: #3a3632;
 $link: #428bca;
 $active: #f9275d;
@@ -25,7 +25,7 @@ $break_large: 992px;
 h1, h2, h3, h4, h5, h6 {
 	color: $copy;
 	font: {
-		family: $heading_font;
+		family: $heading_font, 'Verdana', sans-serif;
 		style: normal;
 		weight: 900;
 	}
@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 3em;
+	font-size: 2em;
 	letter-spacing: 0.025em;
 	margin: {
 		bottom: 0.25em;
@@ -43,22 +43,13 @@ h1 {
 	text-align: center;
 }
 
-h2 {
-	font-size: 2em;
-	letter-spacing: 0.01em;
-}
-
-h3 {
-	font-size: 1.5em;
-}
-
 p {
 	color: $copy;
 	font: {
-		family: $body_font;
-		size: 1.5em;
+		family: $body_font, 'Georgia', serif;
+		size: 1.2em;
 	}
-	line-height: 1.8;
+	line-height: 1.6;
 	margin: 0;
 }
 
